@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iam-policy-auditor"
+version = "0.1.0"
+description = "Auditoria local e didática de políticas JSON do AWS IAM."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Yuri Siqueira Alves" }]
+dependencies = []
+keywords = ["aws", "iam", "security", "cloud-security", "policy-audit"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Education",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Topic :: Security",
+]
+
+[project.scripts]
+iam-audit = "iam_auditor.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["iam_auditor*"]
